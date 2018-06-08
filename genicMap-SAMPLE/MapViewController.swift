@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ViewController: UIViewController {
-
+class MapViewController: UIViewController {
+  @IBOutlet weak var mapView: MKMapView!
+  
+  
+  let locationManager = CLLocationManager()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    Instagram.fetchInstagramData { (instagramData) in
+      DispatchQueue.main.async {
+        print(instagramData)
+      }
+    }
     // Do any additional setup after loading the view, typically from a nib.
   }
 
