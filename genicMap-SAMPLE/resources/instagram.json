@@ -1,0 +1,72 @@
+[
+  {
+    "user": {
+      "id": 1,
+      "full_name": "aaa"
+    },
+    "location": {
+      "latitude": 35,
+      "longitude": 120
+    },
+    "likes": 1,
+    "image": {
+      "url": "test1.jpg"
+    }
+  },
+  {
+    "user": {
+      "id": 1,
+      "full_name": "aaa"
+    },
+    "location": {
+      "latitude": 35,
+      "longitude": 120
+    },
+    "likes": 100,
+    "image": {
+      "url": "test2.jpg"
+    }
+  },
+  {
+    "user": {
+      "id": 2,
+      "full_name": "bbb"
+    },
+    "location": {
+      "latitude": 35,
+      "longitude": 120
+    },
+    "likes": 100,
+    "image": {
+      "url": "test3.jpg"
+    }
+  },
+  {
+    "user": {
+      "id": 2,
+      "full_name": "bbb"
+    },
+    "location": {
+      "latitude": 35,
+      "longitude": 120
+    },
+    "likes": 50,
+    "image": {
+      "url": "test4.jpg"
+    }
+  },
+  {
+    "user": {
+      "id": 3,
+      "full_name": "ccc"
+    },
+    "location": {
+      "latitude": 35,
+      "longitude": 120
+    },
+    "likes": 200,
+    "image": {
+      "url": "test5.jpg"
+    }
+  }
+]
