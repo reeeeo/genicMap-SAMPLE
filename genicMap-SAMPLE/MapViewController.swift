@@ -1,11 +1,9 @@
-//
 //  ViewController.swift
 //  genicMap-SAMPLE
 //
 //  Created by okumura reo on 2018/06/08.
 //  Copyright © 2018年 reo. All rights reserved.
 //
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -14,7 +12,6 @@ class MapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   
   private let locationManager = CLLocationManager()
-  private let annotationIdentifier = "AnnotationIdentifier"
   private var imagePaths: [String: String] = [:]
   
   override func viewDidLoad() {
@@ -34,17 +31,20 @@ class MapViewController: UIViewController {
     
     Instagram.fetchInstagramData { (instagramData) in
       DispatchQueue.main.async {
-        instagramData.data.forEach { d in
-          let pin = MKPointAnnotation()
-          print(d)
-          pin.coordinate = CLLocationCoordinate2D(
-            latitude: (d.location?.latitude)!,
-            longitude: (d.location?.longitude)!)
-          pin.title = String(d.id)
-          self.imagePaths[String(d.id)] = d.image.url
-          self.mapView.addAnnotation(pin)
-        }
+        self.addImageAnnotation(withInstagramData: instagramData)
       }
+    }
+  }
+  
+  private func addImageAnnotation(withInstagramData instagramData: InstagramData) {
+    instagramData.data.forEach { d in
+      let pin = MKPointAnnotation()
+      pin.coordinate = CLLocationCoordinate2D(
+        latitude: (d.location?.latitude)!,
+        longitude: (d.location?.longitude)!)
+      pin.title = String(d.id)
+      self.imagePaths[String(d.id)] = d.image.url
+      self.mapView.addAnnotation(pin)
     }
   }
   
@@ -62,7 +62,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
     if annotationView == nil {
       annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-      annotationView?.canShowCallout = false // 吹き出しの有無
+      annotationView?.canShowCallout = true // 吹き出しの有無
     } else {
       annotationView!.annotation = annotation
     }
