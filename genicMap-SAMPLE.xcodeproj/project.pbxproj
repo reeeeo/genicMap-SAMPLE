@@ -21,6 +21,8 @@
 		7A1B591F20CBC802004649A6 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B591A20CBC802004649A6 /* test1.png */; };
 		7A1B592020CBC802004649A6 /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B591B20CBC802004649A6 /* test5.png */; };
 		7A1B592120CBC802004649A6 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B591C20CBC802004649A6 /* test2.png */; };
+		7AC4527420CC08BC0002A8BD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4527320CC08BC0002A8BD /* CollectionViewController.swift */; };
+		7AC4527820CC0A1A0002A8BD /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4527720CC0A1A0002A8BD /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7A1B591A20CBC802004649A6 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		7A1B591B20CBC802004649A6 /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
 		7A1B591C20CBC802004649A6 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		7AC4527320CC08BC0002A8BD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		7AC4527720CC0A1A0002A8BD /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			children = (
 				7A1B58F520CA0114004649A6 /* AppDelegate.swift */,
 				7A1B58F720CA0114004649A6 /* MapViewController.swift */,
+				7AC4527320CC08BC0002A8BD /* CollectionViewController.swift */,
 				7A1B58F920CA0114004649A6 /* Main.storyboard */,
 				7A1B58FC20CA0115004649A6 /* Assets.xcassets */,
 				7A1B58FE20CA0115004649A6 /* LaunchScreen.storyboard */,
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1B590820CA013C004649A6 /* Instagram.swift */,
+				7AC4527720CC0A1A0002A8BD /* Global.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC4527420CC08BC0002A8BD /* CollectionViewController.swift in Sources */,
 				7A1B58F820CA0114004649A6 /* MapViewController.swift in Sources */,
 				7A1B590920CA013C004649A6 /* Instagram.swift in Sources */,
+				7AC4527820CC0A1A0002A8BD /* Global.swift in Sources */,
 				7A1B58F620CA0114004649A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,8 @@ class MapViewController: UIViewController {
     
     Instagram.fetchInstagramData { (instagramData) in
       DispatchQueue.main.async {
+        let global = Global.sharedObject()
+        global.instagramData = instagramData
         self.addImageAnnotation(withInstagramData: instagramData)
         self.setCenterLocation(withInstagramData: instagramData)
       }
