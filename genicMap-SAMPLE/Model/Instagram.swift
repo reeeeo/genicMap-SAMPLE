@@ -3,6 +3,7 @@ import UIKit
 struct InstagramData: Codable {
   var data: [Data]
   struct Data: Codable {
+    var id: Int
     var user: User
     struct User: Codable {
       var id: Int
