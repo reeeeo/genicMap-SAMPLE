@@ -18,13 +18,6 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     mapView.delegate = self
     
-    let span = MKCoordinateSpanMake(0.1, 0.1)
-    let centerPin = MKPointAnnotation()
-    
-    centerPin.coordinate = CLLocationCoordinate2DMake(35.681167, 139.767052)
-    let region = MKCoordinateRegionMake(centerPin.coordinate, span)
-    mapView.setRegion(region, animated: true)
-    
     locationManager.startUpdatingLocation()
     locationManager.requestWhenInUseAuthorization()
     locationManager.delegate = self
@@ -32,10 +25,12 @@ class MapViewController: UIViewController {
     Instagram.fetchInstagramData { (instagramData) in
       DispatchQueue.main.async {
         self.addImageAnnotation(withInstagramData: instagramData)
+        self.setCenterLocation(withInstagramData: instagramData)
       }
     }
   }
   
+  // InstagramDataの位置情報に画像付きのピンを刺す
   private func addImageAnnotation(withInstagramData instagramData: InstagramData) {
     instagramData.data.forEach { d in
       let pin = MKPointAnnotation()
@@ -46,6 +41,25 @@ class MapViewController: UIViewController {
       self.imagePaths[String(d.id)] = d.image.url
       self.mapView.addAnnotation(pin)
     }
+  }
+  
+  // 緯度経度の平均値に中心にする
+  private func setCenterLocation(withInstagramData instagramData: InstagramData) {
+    let lats = instagramData.data.map { $0.location?.latitude }
+    let lons = instagramData.data.map { $0.location?.longitude }
+    let span = MKCoordinateSpanMake(0.1, 0.1)
+    let centerPin = MKPointAnnotation()
+    centerPin.coordinate = CLLocationCoordinate2DMake(
+      calcAverage(lats),
+      calcAverage(lons)
+    )
+    let region = MKCoordinateRegionMake(centerPin.coordinate, span)
+    mapView.setRegion(region, animated: true)
+  }
+  
+  // Double型の配列の平均値を算出
+  private func calcAverage(_ countableAry: [Double?]) -> Double {
+    return (countableAry.reduce(0) { $0! + $1! } / Double(countableAry.count))
   }
   
   override func didReceiveMemoryWarning() {
