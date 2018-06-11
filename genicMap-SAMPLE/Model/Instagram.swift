@@ -31,7 +31,8 @@ struct Instagram {
       fatalError("Could Not Read : json file.")
     }
     do {
-      let instagram = try JSONDecoder().decode(InstagramData.self, from: data)
+      var instagram = try JSONDecoder().decode(InstagramData.self, from: data)
+      instagram.data.sort { (i1, i2) in return i1.likes > i2.likes }
       completion(instagram)
     } catch {
       fatalError("Failed to parse. \(error)")
