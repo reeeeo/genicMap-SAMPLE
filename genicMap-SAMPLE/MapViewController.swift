@@ -12,7 +12,7 @@ class MapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   
   private let locationManager = CLLocationManager()
-  private var imagePaths: [String: String] = [:]
+  private var imagePaths: [Int: String] = [:]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,7 +40,7 @@ class MapViewController: UIViewController {
         latitude: (d.location?.latitude)!,
         longitude: (d.location?.longitude)!)
       pin.title = String(d.id)
-      self.imagePaths[String(d.id)] = d.image.url
+      self.imagePaths[d.id] = d.image.url
       self.mapView.addAnnotation(pin)
     }
   }
@@ -82,7 +82,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     } else {
       annotationView!.annotation = annotation
     }
-    let pinImage = UIImage(named: imagePaths[annotation.title!!]!)
+    let pinImage = UIImage(named: imagePaths[Int(annotation.title!!)!]!)
     annotationView?.image = pinImage
     annotationView?.frame.size = CGSize(width: 30, height: 30)
     return annotationView
