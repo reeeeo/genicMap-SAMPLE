@@ -84,7 +84,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     }
     let pinImage = UIImage(named: imagePaths[Int(annotation.title!!)!]!)
     annotationView?.image = pinImage
-    annotationView?.frame.size = CGSize(width: 30, height: 30)
+    annotationView?.frame.size = CGSize(width: 50, height: 50)
     return annotationView
   }
   

@@ -13,7 +13,7 @@
       },
       "likes": 1,
       "image": {
-        "url": "sunshine.png"
+        "url": "sunshine.jpg"
       }
     },
     {
@@ -29,7 +29,7 @@
       },
       "likes": 100,
       "image": {
-        "url": "aquapark.png"
+        "url": "aquapark.jpg"
       }
     },
     {
@@ -45,7 +45,7 @@
       },
       "likes": 100,
       "image": {
-        "url": "kasaiaquarium.png"
+        "url": "kasaiaquarium.jpg"
       }
     },
     {
@@ -61,7 +61,7 @@
       },
       "likes": 50,
       "image": {
-        "url": "tokyototyo.png"
+        "url": "tokyototyo.jpg"
       }
     },
     {
@@ -77,7 +77,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "gyoen.png"
+        "url": "gyoen.jpg"
       }
     },
     {
@@ -93,7 +93,7 @@
       },
       "likes": 2000,
       "image": {
-        "url": "rikugien.png"
+        "url": "rikugien.jpg"
       }
     },
     {
@@ -109,7 +109,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "hamarikyu.png"
+        "url": "hamarikyu.jpg"
       }
     },
     {
@@ -125,7 +125,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "meijijingu.png"
+        "url": "meijijingu.jpg"
       }
     },
     {
@@ -141,7 +141,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "kahaku.png"
+        "url": "kokurituhakubutukan.jpg"
       }
     },
     {
@@ -157,7 +157,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "sinmuseum.png"
+        "url": "sinmuseum.jpg"
       }
     },
     {
@@ -173,7 +173,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "miraikan.png"
+        "url": "miraikan.jpg"
       }
     },
     {
@@ -189,23 +189,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "skytree.png"
-      }
-    },
-    {
-      "id": 12,
-      "user": {
-        "id": 6,
-        "full_name": "user6"
-      },
-      "location": {
-        "latitude": 35.7100627,
-        "longitude": 139.8107004,
-        "name": "スカイツリー"
-      },
-      "likes": 200,
-      "image": {
-        "url": "skytree.png"
+        "url": "skytree.jpg"
       }
     },
     {
@@ -221,7 +205,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "tokyotower.png"
+        "url": "tokyotower.jpg"
       }
     },
     {
@@ -237,7 +221,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "tokyotower.png"
+        "url": "tokyotower2.jpg"
       }
     },
     {
@@ -253,7 +237,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "uenozoo.png"
+        "url": "uenozoo.jpg"
       }
     },
     {
@@ -269,7 +253,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "budokan.png"
+        "url": "budokan.jpg"
       }
     },
     {
@@ -285,7 +269,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "hatiko.png"
+        "url": "hatiko.jpg"
       }
     },
     {
@@ -301,7 +285,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "hatsudai.png"
+        "url": "hatsudai.jpg"
       }
     },
     {
@@ -317,7 +301,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "kokugikan.png"
+        "url": "kokugikan.jpg"
       }
     },
     {
@@ -333,7 +317,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "catstreet.png"
+        "url": "catstreet.jpg"
       }
     },
     {
@@ -349,7 +333,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "yoyogipark.png"
+        "url": "yoyogipark.jpg"
       }
     },
     {
@@ -365,7 +349,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "hibiyapark.png"
+        "url": "hibiya.jpg"
       }
     },
     {
@@ -381,7 +365,7 @@
       },
       "likes": 200,
       "image": {
-        "url": "shinjukusantyome.png"
+        "url": "shinjukusantyome.jpg"
       }
     }
   ]
