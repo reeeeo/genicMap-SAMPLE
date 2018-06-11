@@ -13,6 +13,7 @@ struct InstagramData: Codable {
     struct Location: Codable {
       var latitude: Double
       var longitude: Double
+      var name: String
     }
     var likes: Int
     var image: Image
